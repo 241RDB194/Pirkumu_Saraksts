@@ -28,7 +28,7 @@
 *   [x] **Aprēķināt nopirkto un vēl iegādājamo preču izmaksas**<br />
 Šī metode aprēķina kopējo izmaksu summu produktiem, kuriem pirkuma statuss ir "Nopirkts" un kuriem pirkuma statuss ir "Vajag nopirkt".
 *   [x] **Apstiprināt preces kā nopirktas**<br />
-Šī metode ļauj apstriprināt produktu kā nopirktu, izmainot produkta statusu uz "Nopirkts".
+Šī metode ļauj apstiprināt produktu kā nopirktu, izmainot produkta statusu uz "Nopirkts".
 *   [x] **Eksportēt pirkumu sarakstu uz Excel failu**<br />
 Šī metode ļauj eksportēt pirkumu sarakstu uz Excel failu, saglabājot visus produktus ar to raksturojošajām kategorijām, cenām un statusiem.
 
@@ -52,11 +52,11 @@ Kā sākt izmantot "Pirkumu Saraksts" programmu:
      1. Pievienot produktu pirkumu sarakstam
      2. Dzēst produktu no pirkumu saraksta
      3. Apskatīt pirkumu sarakstu
-     4. Apstriprināt produktu, kas ir nopirkts
+     4. Apstriprināt produktu, kā nopirktu
      5. Apskatīt izmaksas nopirktajām un pērkamajām precēm
      6. Ierakstīt Excel failā pirkumu sarakstu
      7. Iziet no programmas
-6. Saglabā datus, izvēloties sesto opciju "Ierakstīt Excel failā pirkumu sarakstu"", jo programma saglabā sarakstu Excel failā tikai tad, kad izvēlas attiecīgo opciju. Dati netiek automātisku saglabāti, ja tos neeksportē uz Excel failu.
+6. Saglabā datus, izvēloties sesto opciju "Ierakstīt Excel failā pirkumu sarakstu", jo programma saglabā sarakstu Excel failā tikai tad, kad izvēlas attiecīgo opciju. Dati netiek automātisku saglabāti, ja tos neeksportē uz Excel failu.
 ## Prasības
 
 * Python 3.x
@@ -67,7 +67,7 @@ Kā sākt izmantot "Pirkumu Saraksts" programmu:
 
 Šajā projektā tiek izmantotas sekojošās Python bibliotēkas:
 1. `openpyxl` <br />
-Šī bibliotēka ir izmantota, lai strādātu ar Excel failiem(XLSX formatu), XLSX failu izveidei, šūnu formatēšanai un pirkumu saraksta datu eksportēšanai uz Excel izklājlapu.
+Šī bibliotēka tiek izmantota, lai strādātu ar Excel failiem(XLSX formatu), XLSX failu izveidei, šūnu formatēšanai un pirkumu saraksta datu eksportēšanai uz Excel izklājlapu.
 2. `datetime` <br />
 Šī bibliotēka ir izmantota, lai iegūtu pašreizējo laiku, datumu un lai pierakstītu datu ievades laiku Excel failā.
 
