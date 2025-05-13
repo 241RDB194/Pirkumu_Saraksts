@@ -33,15 +33,24 @@ def perkamo_un_nopirkto_produktu_izmaksas():
   print(f"Produkti nopirkti par:{summa_nopirktajiem_produktiem:.2f}EUR")
   print(f"Produkti jāpērk par:{summa_perkamajiem_produktiem:.2f}EUR\n")
 
-  
+def apstiprinat_ka_nopirkts():
+  Produkta_nosaukums = input("Produkta nosaukums, kas ir nopirkts: ")
+  if Produkta_nosaukums in Iepirkumu_saraksts:
+    Iepirkumu_saraksts[Produkta_nosaukums]["Pirkuma statuss"]="Nopirkts"
+    print(Produkta_nosaukums, "ir nopirkts.\n")
+  else:
+    print('Produkts nav atrasts iepirkumu sarakstā.')
+
 def opcijas():
   while True:
     print("1. Pievienot produktu iepirkuma sarakstam")
     print("2. Dzēst produktu no iepirkuma saraksta")
     print("3. Apskatīt iepirkuma sarakstu")
-    print("4. Beigt programmu")
+    print("4. Apstriprināt produktu, kas ir nopirkts")
+    print("5. Apskatīt izmaksas nopirktam un perkamam precem")
+    print("6. Beigt programmu")
 
-    lietotaja_opcija = input("Opcija no 1 līdz 4: ")
+    lietotaja_opcija = input("Opcija no 1 līdz 6: ")
 
     if lietotaja_opcija == "1":
       pievienot_iepirkuma_sarakstam()
@@ -50,6 +59,10 @@ def opcijas():
     elif lietotaja_opcija == "3":
       apskatit_sarakstu()
     elif lietotaja_opcija == "4":
+      apstiprinat_ka_nopirkts()
+    elif lietotaja_opcija == "5":
+      perkamo_un_nopirkto_produktu_izmaksas()
+    elif lietotaja_opcija == "6":
       break
     else: print("Jāizvēlas opcija no 1 līdz 4\n")
 
