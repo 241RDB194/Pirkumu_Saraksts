@@ -10,7 +10,7 @@ def pievienot_pirkuma_sarakstam():
   Pirkumu_saraksts[Produkta_nosaukums]={"Produkta kategorija": produkta_kategorija,
                                             "Produkta cena(EUR)": produkta_cena,
                                             "Pirkuma statuss": "Vajag nopirkt"}            
-  print(Produkta_nosaukums, " ir pievienots pirkuma sarakstam.")
+  print(Produkta_nosaukums, "ir pievienots pirkuma sarakstam.")
 
 def dzest_produktu_no_saraksta():
   Produkta_nosaukums = input("Ievadiet produkta nosaukumu, kuru vajag izdzēst: ")
