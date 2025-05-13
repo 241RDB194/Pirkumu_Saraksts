@@ -46,7 +46,7 @@ Kā sākt izmantot "Pirkumu Saraksts" programmu:
 
 1. Jāpārliecinās, ka ir uzstādīts Python 3. Ja nepieciešamas, to lejupielādē no https://www.python.org/downloads/.
 2. Jāinstalē nepieciešamo bibliotēku ar komandu `pip install openpyxl`.
-3. Jālejupielādē vai jānokopē programmas pirkumu saraksts.py failu savā datorā.
+3. Jālejupielādē vai jānokopē programmas pirkumu_saraksts.py failu savā datorā.
 4. Palaiž programmu ar Python: `python pirkumu_saraksts.py`
 5. Izvēlās vienu no piedāvātajām opcijām:
      1. Pievienot produktu pirkumu sarakstam
