@@ -16,3 +16,4 @@ def dzest_produktu_no_saraksta():
     print(Produkta_nosaukums, "ir izdzēsts no saraksta\n")
   else:
     print("Produkts nav atrasts iepirkumu sarakstā.")
+
