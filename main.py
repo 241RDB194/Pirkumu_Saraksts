@@ -2,7 +2,7 @@ import openpyxl
 from datetime import datetime
 from openpyxl.utils import get_column_letter
 Pirkumu_saraksts = {}
-def pievienot_iepirkuma_sarakstam():
+def pievienot_pirkuma_sarakstam():
 
   Produkta_nosaukums = input("Produkta nosaukums: ")
   produkta_kategorija = input("Produkta kategorija: ")
@@ -87,7 +87,7 @@ def opcijas():
     lietotaja_opcija = input("Izvēlies Opciju no 1 līdz 7: ")
 
     if lietotaja_opcija == "1":
-      pievienot_iepirkuma_sarakstam()
+      pievienot_pirkuma_sarakstam()
     elif lietotaja_opcija == "2":
       dzest_produktu_no_saraksta()
     elif lietotaja_opcija == "3":
