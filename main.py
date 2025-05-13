@@ -1,42 +1,42 @@
 import openpyxl
 from datetime import datetime
-Iepirkumu_saraksts = {}
+Pirkumu_saraksts = {}
 def pievienot_iepirkuma_sarakstam():
 
   Produkta_nosaukums = input("Produkta nosaukums: ")
   produkta_kategorija = input("Produkta kategorija: ")
   produkta_cena = float(input("Cena(EUR): "))
-  Iepirkumu_saraksts[Produkta_nosaukums]={"Produkta kategorija": produkta_kategorija,
+  Pirkumu_saraksts[Produkta_nosaukums]={"Produkta kategorija": produkta_kategorija,
                                             "Produkta cena(EUR)": produkta_cena,
                                             "Pirkuma statuss": "Vajag pirkt"}            
   print(Produkta_nosaukums, "pievienots iepirkuma sarakstam.")
 
 def dzest_produktu_no_saraksta():
   Produkta_nosaukums = input("Ievadiet produkta nosaukumu, kuru vajag izdzēst: ")
-  if Produkta_nosaukums in Iepirkumu_saraksts:
-    del Iepirkumu_saraksts[Produkta_nosaukums]
+  if Produkta_nosaukums in Pirkumu_saraksts:
+    del Pirkumu_saraksts[Produkta_nosaukums]
     print(Produkta_nosaukums, "ir izdzēsts no saraksta\n")
   else:
     print("Produkts nav atrasts iepirkumu sarakstā.")
 
 def apskatit_sarakstu():
-  if not Iepirkumu_saraksts:
+  if not Pirkumu_saraksts:
     print("Iepirkumu saraksts ir tukšs\n")
     return
-  for Produkta_nosaukums, i in Iepirkumu_saraksts.items():
+  for Produkta_nosaukums, i in Pirkumu_saraksts.items():
     print(Produkta_nosaukums + ' | ' + i['Produkta kategorija'] + ' | ' + str(i['Produkta cena(EUR)']) + " EUR | " + i['Pirkuma statuss'])
   print()
 
 def perkamo_un_nopirkto_produktu_izmaksas():
-  summa_nopirktajiem_produktiem = sum(i['Produkta cena(EUR)'] for i in Iepirkumu_saraksts.values() if i["Pirkuma statuss"] == "Nopirkts")
-  summa_perkamajiem_produktiem = sum(i['Produkta cena(EUR)'] for i in Iepirkumu_saraksts.values() if i["Pirkuma statuss"] == "Vajag pirkt")
+  summa_nopirktajiem_produktiem = sum(i['Produkta cena(EUR)'] for i in Pirkumu_saraksts.values() if i["Pirkuma statuss"] == "Nopirkts")
+  summa_perkamajiem_produktiem = sum(i['Produkta cena(EUR)'] for i in Pirkumu_saraksts.values() if i["Pirkuma statuss"] == "Vajag pirkt")
   print(f"Produkti nopirkti par:{summa_nopirktajiem_produktiem:.2f}EUR")
   print(f"Produkti jāpērk par:{summa_perkamajiem_produktiem:.2f}EUR\n")
 
 def apstiprinat_ka_nopirkts():
   Produkta_nosaukums = input("Produkta nosaukums, kas ir nopirkts: ")
-  if Produkta_nosaukums in Iepirkumu_saraksts:
-    Iepirkumu_saraksts[Produkta_nosaukums]["Pirkuma statuss"]="Nopirkts"
+  if Produkta_nosaukums in Pirkumu_saraksts:
+    Pirkumu_saraksts[Produkta_nosaukums]["Pirkuma statuss"]="Nopirkts"
     print(Produkta_nosaukums, "ir nopirkts.\n")
   else:
     print('Produkts nav atrasts iepirkumu sarakstā.')
@@ -64,7 +64,7 @@ def opcijas():
       perkamo_un_nopirkto_produktu_izmaksas()
     elif lietotaja_opcija == "6":
       break
-    else: print("Jāizvēlas opcija no 1 līdz 4\n")
+    else: print("Jāizvēlas opcija no 1 līdz 6\n")
 
 
     
