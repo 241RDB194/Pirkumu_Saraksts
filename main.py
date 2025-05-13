@@ -27,6 +27,13 @@ def apskatit_sarakstu():
     print(Produkta_nosaukums + ' | ' + i['Produkta kategorija'] + ' | ' + str(i['Produkta cena(EUR)']) + " EUR | " + i['Pirkuma statuss'])
   print()
 
+def perkamo_un_nopirkto_produktu_izmaksas():
+  summa_nopirktajiem_produktiem = sum(i['Produkta cena(EUR)'] for i in Iepirkumu_saraksts.values() if i["Pirkuma statuss"] == "Nopirkts")
+  summa_perkamajiem_produktiem = sum(i['Produkta cena(EUR)'] for i in Iepirkumu_saraksts.values() if i["Pirkuma statuss"] == "Vajag pirkt")
+  print(f"Produkti nopirkti par:{summa_nopirktajiem_produktiem:.2f}EUR")
+  print(f"Produkti jāpērk par:{summa_perkamajiem_produktiem:.2f}EUR\n")
+
+  
 def opcijas():
   while True:
     print("1. Pievienot produktu iepirkuma sarakstam")
