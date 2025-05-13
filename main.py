@@ -72,7 +72,7 @@ def ierakstit_excel():
 
 
 
-def opcijas():
+def izvelne():
   while True:
     print("*************** Pirkumu saraksts *****************")
     print("1. Pievienot produktu pirkumu sarakstam")
@@ -103,6 +103,6 @@ def opcijas():
     else: print("Ķļūdaina ievade. Jāizvēlas opcijas no 1 līdz 7\n")
 
 if __name__ == "__main__":
-  opcijas()
+  izvelne()
 
 
