@@ -78,7 +78,7 @@ def izvelne():
     print("1. Pievienot produktu pirkumu sarakstam")
     print("2. Dzēst produktu no pirkumu saraksta")
     print("3. Apskatīt pirkumu sarakstu")
-    print("4. Apstriprināt produktu, kas ir nopirkts")
+    print("4. Apstriprināt produktu, kā nopirktu")
     print("5. Apskatīt izmaksas nopirktajām un pērkamajām precēm")
     print("6. Ierakstīt Excel failā pirkumu sarakstu")
     print("7. Iziet no programmas")
