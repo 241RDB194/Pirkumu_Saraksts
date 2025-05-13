@@ -9,7 +9,7 @@ def pievienot_iepirkuma_sarakstam():
   produkta_cena = float(input("Cena(EUR): "))
   Pirkumu_saraksts[Produkta_nosaukums]={"Produkta kategorija": produkta_kategorija,
                                             "Produkta cena(EUR)": produkta_cena,
-                                            "Pirkuma statuss": "Vajag pirkt"}            
+                                            "Pirkuma statuss": "Vajag nopirkt"}            
   print(Produkta_nosaukums, " ir pievienots pirkuma sarakstam.")
 
 def dzest_produktu_no_saraksta():
@@ -30,7 +30,7 @@ def apskatit_sarakstu():
 
 def perkamo_un_nopirkto_produktu_izmaksas():
   summa_nopirktajiem_produktiem = sum(i['Produkta cena(EUR)'] for i in Pirkumu_saraksts.values() if i["Pirkuma statuss"] == "Nopirkts")
-  summa_pērkamajiem_produktiem = sum(i['Produkta cena(EUR)'] for i in Pirkumu_saraksts.values() if i["Pirkuma statuss"] == "Vajag pirkt")
+  summa_pērkamajiem_produktiem = sum(i['Produkta cena(EUR)'] for i in Pirkumu_saraksts.values() if i["Pirkuma statuss"] == "Vajag nopirkt")
   print(f"Produkti nopirkti par:{summa_nopirktajiem_produktiem:.2f}EUR")
   print(f"Produkti jāpērk par:{summa_pērkamajiem_produktiem:.2f}EUR\n")
 
