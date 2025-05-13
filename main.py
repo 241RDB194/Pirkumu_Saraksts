@@ -3,7 +3,9 @@ from datetime import datetime
 Iepirkumu_saraksts = {}
 def pievienot_iepirkuma_sarakstam():
 
-  Produkta_nosaukums = input("Produkta nosaukums: "), produkta_kategorija = input("Produkta kategorija: "), produkta_cena = float(input("Cena(EUR): "))
+  Produkta_nosaukums = input("Produkta nosaukums: ")
+  produkta_kategorija = input("Produkta kategorija: ")
+  produkta_cena = float(input("Cena(EUR): "))
   Iepirkumu_saraksts[Produkta_nosaukums]={"Produkta kategorija": produkta_kategorija,
                                             "Produkta cena(EUR)": produkta_cena,
                                             "Pirkuma statuss": "Vajag pirkt"}            
@@ -16,4 +18,39 @@ def dzest_produktu_no_saraksta():
     print(Produkta_nosaukums, "ir izdzēsts no saraksta\n")
   else:
     print("Produkts nav atrasts iepirkumu sarakstā.")
+
+def apskatit_sarakstu():
+  if not Iepirkumu_saraksts:
+    print("Iepirkumu saraksts ir tukšs\n")
+    return
+  for Produkta_nosaukums, i in Iepirkumu_saraksts.items():
+    print(Produkta_nosaukums + ' | ' + i['Produkta kategorija'] + ' | ' + str(i['Produkta cena(EUR)']) + " EUR | " + i['Pirkuma statuss'])
+  print()
+
+def opcijas():
+  while True:
+    print("1. Pievienot produktu iepirkuma sarakstam")
+    print("2. Dzēst produktu no iepirkuma saraksta")
+    print("3. Apskatīt iepirkuma sarakstu")
+    print("4. Beigt programmu")
+
+    lietotaja_opcija = input("Opcija no 1 līdz 4: ")
+
+    if lietotaja_opcija == "1":
+      pievienot_iepirkuma_sarakstam()
+    elif lietotaja_opcija == "2":
+      dzest_produktu_no_saraksta()
+    elif lietotaja_opcija == "3":
+      apskatit_sarakstu()
+    elif lietotaja_opcija == "4":
+      break
+    else: print("Jāizvēlas opcija no 1 līdz 4\n")
+
+
+    
+
+
+if __name__ == "__main__":
+  opcijas()
+
 
