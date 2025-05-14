@@ -11,7 +11,6 @@
 - [Kad izmantot šo programmu?](#kad-izmantot-šo-programmu)
 - [Kā lietot šo programmu?](#kā-lietot-šo-programmu)
 - [Prasības](#prasības)
-- [Metožu pārskats](#metožu-pārskats)
 - [Izmantotās bibliotēkas](#izmantotās-bibliotēkas)
 - [Avoti](#avoti)
 - [Autors](#autors)
